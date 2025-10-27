@@ -60,28 +60,3 @@ This project demonstrates real-world Java EE concepts including Servlets, JDBC, 
 | **Deployment** | Docker + Render Cloud |
 
 ---
-
-## 📁 Project Structure
-MedicalManagementSystem/
-│
-├── src/
-│   ├── Servlet/               # Contains all servlet classes
-│   │   └── LoginServlet.java
-│   ├── Dao/                   # Data access layer
-│   │   └── OwnerDao.java
-│   ├── Model/                 # JavaBeans (POJO classes)
-│   └── util/                  # DB connection utility
-│
-├── WebContent/
-│   ├── login.jsp
-│   ├── dashboard.jsp
-│   ├── WEB-INF/
-│   │   └── web.xml
-│
-├── Dockerfile
-├── MedicalManagementSystem.war
-└── README.md
-
-
-
-
