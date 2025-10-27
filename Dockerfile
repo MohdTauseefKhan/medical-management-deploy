@@ -1,13 +1,17 @@
-FROM openjdk:17-jdk-slim
+# Use official Tomcat base image
+FROM tomcat:10.1-jdk17
 
-WORKDIR /app
+# Set working directory
+WORKDIR /usr/local/tomcat/webapps/
 
-# Copy all necessary files
-COPY MedicalManagementSystem.war .
-COPY webapp-runner-main-9.0.41.0.jar .
+# Remove the default ROOT app
+RUN rm -rf ROOT
 
-# Expose Render's dynamic port
+# Copy your WAR file and rename it as ROOT.war
+COPY MedicalManagementSystem.war ROOT.war
+
+# Expose Render's port
 EXPOSE 8080
 
-# Start the app using webapp-runner
-CMD ["java", "-jar", "webapp-runner-main-9.0.41.0.jar", "--port", "8080", "MedicalManagementSystem.war"]
+# Start Tomcat
+CMD ["catalina.sh", "run"]
