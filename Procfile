@@ -1,1 +1,0 @@
-web: java -jar jetty-runner.jar --port $PORT medical-management-system.war
