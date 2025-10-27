@@ -1,0 +1,1 @@
+web: java -jar webapp-runner-main-9.0.41.0.jar --port $PORT MedicalManagementSystem.war
